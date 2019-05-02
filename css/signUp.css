@@ -1,0 +1,62 @@
+.yjHeader a{
+	color: #000;	
+}
+.yjForm{
+	margin-top: 50px;
+}
+label span{
+	color: #2AC845;
+	/* margin-left: 15px; */
+}
+.yjYaochi{
+	padding-left: 5px;
+}
+#yjShuru{
+	/* background: red; */
+	position: relative;
+	/* width: 300px; */
+	left: -80px;
+	/* width: 80%; */
+	/* margin-right: 10px; */
+}
+.yjwangji{
+	color: #2AC845;
+	font-size: 12px;
+	padding-left: 20px;
+}
+.yjBtnBox{
+	margin-top: -25px;
+}
+.yjBtn1{
+	background: mediumseagreen;
+	width: 42%;
+	height: 25px;
+	line-height: 1;
+	margin-right: 20px;
+	border-radius: 5px;
+	color: #Fff;
+}
+.yjBtn2{
+	background: #fff;
+	width: 42%;
+	height: 25px;
+	line-height: 1;
+	color: #3CB371;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+.yjDenglu{
+	text-align: center;
+}
+.yjTudenglu p{
+	text-align: center;
+}
+.yjTudenglu p img{
+	margin: 0 40px;
+}
+.yjTudenglus p{
+	text-align: center;
+}
+.yjTudenglus p img{
+	width: 40%;
+}

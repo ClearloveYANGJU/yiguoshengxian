@@ -58,3 +58,103 @@ span.yjScan {
 #yjUl li a div{
 	font-size: 12px;
 }
+.yjGonggao span{
+	font-size: 12px;
+	line-height: 30px;
+}
+.yjGonggao span img{	
+	width: 50px;
+	margin-right: 50px;
+}
+.yjTupian{
+	text-align: center;
+}
+#yjImgs{
+	width: 100%;
+	height: 100px;
+	list-style: none;
+}
+#yjImgs li{
+	float: left;
+}
+.yjChanpin{
+	width: 500px;
+	height: 100%;
+	/* margin-top: 30px; */
+	/* background: #fff; */
+	font-size: 12px;
+	/* margin: 0 15px; */
+}
+.yjChanpin img{
+	width: 120px;
+}
+.yjChanpin>a{
+	color: #2AC845;
+	border: 1px solid #2AC845;
+	border-radius: 5px;
+	padding: 2px 5px;
+}
+.yjChanpin p{
+	font-size: 12px;
+	line-height: 25px;
+}
+.yjChanpin p:nth-child(4)>span{
+	color: red;
+	font-weight: 700;
+}
+#yjDiv{
+	width: 300%;
+	margin-top: 20px;
+	padding-left: 20px;
+	/* margin-right: 150px; */
+	background: #fff;
+	/* border-radius: 50px 0 0 0; */
+	
+}
+.swiper-container2{
+	position: relative;
+	top: -30px;
+	background: #fff;
+	border-radius: 50px 0 0 0;
+}
+#yjBox{
+	margin-top: -30px;
+}
+/* 美食 */
+.yjMeishi{
+	margin-top: -20px;
+	text-align: center;
+}
+.yjMeishi span img{
+	margin: 0 2px;
+}
+/* 水果展览 */
+#yjLi{
+	max-width: 120px;
+	height: 120px;	
+}
+.yjBody p{
+	font-size: 12px;
+	margin-bottom: 70px;
+}
+.yjBodys p{
+	margin-bottom: 55px;
+}
+.yjJiage p{
+	font-size: 12px;
+}
+.yjJiage p>span{
+	font-size: 16px;
+	font-weight: 700;
+	color: red;	
+}
+#yjSpan{
+	font-size: 25px;
+	color: #2AC845;
+}
+.yjBanjia{
+	color: #2AC845;
+	border: 1px solid #2AC845;
+	padding: 2px 3px;
+	border-radius: 15px;
+}
