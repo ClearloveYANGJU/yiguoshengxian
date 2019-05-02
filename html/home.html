@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/home.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/swiper.min.js"></script>
+		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				background: #fff;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				/*background: pink;*/
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- 顶部标题 -->
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="yjA">北京 <span class="mui-icon mui-icon-arrowdown"></span></a>
+			<span class="iconfont icon-scan mui-pull-right yjScan"></span>
+			<!-- 搜索框 -->
+			<div class="mui-input-row mui-search yjSearch">
+				<input type="search" class="mui-input-clear" placeholder="请输入商品名称">
+			</div>
+
+		</header>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper yjSwiper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../img/lunbo01.png" /></div>
+							<div class="swiper-slide"><img src="../img/lunbo02.png" /></div>
+							<div class="swiper-slide"><img src="../img/lunbo03.png" /></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="yjTiaodong">
+						<img src="../img/lunbo01.png">
+						<img src="../img/tiaodong01.png">
+					</div>
+				</ul>
+				<ul class="mui-table-view mui-grid-view mui-grid-9"id="yjUl">
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo01.png" ></span>
+							<div class="mui-media-body">新鲜水果</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo02.png" ></span>
+							<div class="mui-media-body">精选肉类</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo03.png" ></span>
+							<div class="mui-media-body">海鲜水产</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo04.png" ></span>
+							<div class="mui-media-body">快手料理</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo05.png" ></span>
+							<div class="mui-media-body">会员福利</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo06.png" ></span>
+							<div class="mui-media-body">精品原箱</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo07.png" ></span>
+							<div class="mui-media-body">银行活动</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3">
+						<a href="#">
+							<span class="mui-icon"><img src="../img/shuiguo08.png" ></span>
+							<div class="mui-media-body">即烹美食</div>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh,
+						contentdown: "下拉同步数据", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "松开同步数据", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						//contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: '正在同步数据...', //刷新过程显示的字
+					},
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+		</script>
+	</body>
+	<script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+			//navigation 使用前进后退按钮来控制Swiper切换。
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				//设置为true启动自动切换，并使用默认的切换设置。 默认false
+				delay: 2500,
+				//delay 自动切换的时间间隔，单位ms
+				disableOnInteraction: false,
+				//用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+				//如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+				//操作包括触碰，拖动，点击pagination等。
+			},
+
+			pagination: {
+				//分页器容器的css选择器或HTML标签。分页器等组件可以置于container之外，
+				//不同Swiper的组件应该有所区分，如#pagination1，#pagination2。
+				el: '.swiper-pagination', //el  获取分页器的css选择器
+				//dynamicBullets 动态分页器，当你的slide很多时，开启后，分页器小点的数量会部分隐藏。
+				//类型：boolean 默认：false
+				dynamicBullets: true, //type 分页器样式类型，可选
+				//‘bullets’  圆点（默认）
+				//‘fraction’  分式 
+				//‘progressbar’  进度条
+				//‘custom’ 自定义
+				//      		type: 'progressbar',
+
+			},
+			loop: true,
+			//		        direction: 'vertical',      			
+			//direction: Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。类型：string默认：horizontal
+			spaceBetween: 30, //在slide之间设置距离（单位px）类型：number 默认：0
+		});
+	</script>
+</html>
