@@ -1,0 +1,25 @@
+#yjShurus{
+	position: relative;
+	left: -115px;
+}
+.yjP{
+	position: relative;
+	right: -280px;
+	bottom: 10px;
+	/* color: #2AC845; */
+	font-size: 12px;
+	padding: 2px 3px;
+	border: 1px solid #2AC845;
+	border-radius: 2px;
+}
+.yjXieyi{
+	font-size: 12px;
+}
+.yjBtn2s{
+	background: mediumseagreen;
+	color: #fff;
+	width: 180px;
+	height: 40px;
+	border-radius: 10px;
+	font-size: 12px;
+}
